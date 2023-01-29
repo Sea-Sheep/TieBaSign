@@ -37,7 +37,7 @@ jobs:
         run: python main.py
       - name: Chickin Api #签到
         run: | 
-          echo -n `date +%Y-%m-%d\ %H:%M:%S`\ -\ \n >> ./run.log 
+          echo -n `date +%Y-%m-%d\ %H:%M:%S \n`\ -\  >> ./run.log 
           tail run.log #避免日志上传失败丢失日志
       - name: Push log #更新日志
         uses: stefanzweifel/git-auto-commit-action@v4
